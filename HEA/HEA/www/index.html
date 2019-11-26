@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta charset="utf-8" />
+    <title>HEA</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://api.tomtom.com/maps-sdk-for-web/5.x/5.39.0/examples/sdk/web-sdk-maps/maps.css" />
+    <link rel="stylesheet" href="https://api.tomtom.com/maps-sdk-for-web/5.x/5.39.0/examples/pages/examples/styles/main.css" />
+    <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
+</head>
+<body class="is-preload landing">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo">HealthyEverAfter</h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="#">history</a></li>
+                    <li><a href="#">health care</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="content">
+            <div class="content">
+                <div id='map' class='map'></div>
+                <script>
+                    // Note: This example requires that you consent to location sharing when
+                    // prompted by your browser. If you see the error "The Geolocation service
+                    // failed.", it means you probably did not give permission for the browser to
+                    // locate you.
+                    var map, infoWindow;
+                    function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: { lat: -34.397, lng: 150.644 },
+                            zoom: 6
+                        });
+                        infoWindow = new google.maps.InfoWindow;
+
+                        // Try HTML5 geolocation.
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(function (position) {
+                                var pos = {
+                                    lat: position.coords.latitude,
+                                    lng: position.coords.longitude
+                                };
+
+                                infoWindow.setPosition(pos);
+                                infoWindow.setContent('Location found.');
+                                infoWindow.open(map);
+                                map.setCenter(pos);
+                            }, function () {
+                                handleLocationError(true, infoWindow, map.getCenter());
+                            });
+                        } else {
+                            // Browser doesn't support Geolocation
+                            handleLocationError(false, infoWindow, map.getCenter());
+                        }
+                    }
+
+                    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+                        infoWindow.setPosition(pos);
+                        infoWindow.setContent(browserHasGeolocation ?
+                            'Error: The Geolocation service failed.' :
+                            'Error: Your browser doesn\'t support geolocation.');
+                        infoWindow.open(map);
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJkourBPASkU_xNTp7Z9xmKMxWRh6lar0&callback=initMap">
+                </script>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+            <div class="copyright">
+                &copy; Healthly Ever After. Design: <a href="http://html5up.net">HTML5 UP</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.scrolly.min.js"></script>
+    <script src="scripts/jquery.dropotron.min.js"></script>
+    <script src="scripts/jquery.scrollex.min.js"></script>
+    <script src="scripts/browser.min.js"></script>
+    <script src="scripts/breakpoints.min.js"></script>
+    <script src="scripts/util.js"></script>
+    <script src="scripts/main.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <!--<script src='https://api.tomtom.com/maps-sdk-for-web/5.x/5.39.0/examples/sdk/web-sdk-maps/maps-web.min.js'></script>
+    <script type='text/javascript' src='https://api.tomtom.com/maps-sdk-for-web/5.x/5.39.0/examples/pages/examples/assets/js/mobile-or-tablet.js'></script>
+    <script>
+        var map = tt.map({
+            key: 'QOJHk0VdArrrnDwthuAVz5imj7jAHLur',
+            container: 'map',
+            style: 'tomtom://vector/1/basic-main',
+            dragPan: !window.isMobileOrTablet()
+        });
+        map.addControl(new tt.FullscreenControl());
+        map.addControl(new tt.NavigationControl());
+    </script>-->
+</body>
+</html>
