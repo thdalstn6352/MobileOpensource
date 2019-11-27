@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
 <head>
     <!--
@@ -16,7 +18,37 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="css/main.css" />
     <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJkourBPASkU_xNTp7Z9xmKMxWRh6lar0&callback=init"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCJkourBPASkU_xNTp7Z9xmKMxWRh6lar0&callback=init"></script>
+    <script>
+
+        // On vérifie si le navigateur supporte la géolocalisation
+        if (navigator.geolocation) {
+
+            function hasPosition(position) {
+                // Instanciation
+                var point = new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+
+                    // Ajustage des paramètres
+                    myOptions = {
+                        zoom: 15,
+                        center: point,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    },
+
+                    // Envoi de la carte dans la div
+                    mapDiv = document.getElementById("map"),
+                    map = new google.maps.Map(mapDiv, myOptions),
+
+                    marker = new google.maps.Marker({
+                        position: point,
+                        map: map,
+                        // Texte du point
+                        title: "Vous êtes ici"
+                    });
+            }
+            navigator.geolocation.getCurrentPosition(hasPosition);
+        }
+    </script>
 </head>
 <body class="is-preload landing">
     <div id="page-wrapper">
