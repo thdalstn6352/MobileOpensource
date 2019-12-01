@@ -12,3 +12,6 @@ activity ever after will be able to eliminate the need for multiple different ap
 
 
 Then, You can check the progress of our project on the Project tab. I hope this content will help you. Thank you
+
+Where can you find the .apk file for android:  \HEA\HEA\bin\Android\Debug\android-debug.apk
+Then download it and allow everytings.
