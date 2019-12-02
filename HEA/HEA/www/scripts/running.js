@@ -24,5 +24,7 @@ function stopRunning() {
 
     var result = { 'Start: ': startTime, ' Stop: ': stopTime, ' Total: ': totalTime };
     // Put the object into storage
-    localStorage.setItem('result', JSON.stringify(result));
+    var i;
+    for (i = 0; i < localStorage.length; i++) {}
+    localStorage.setItem('result' + i, JSON.stringify(result));
 }
