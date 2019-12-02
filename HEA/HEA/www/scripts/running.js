@@ -8,7 +8,6 @@ function startRunning() {
     document.getElementById("startButton").innerHTML = "stop";
     document.getElementById("startButton").removeAttribute("onclick");
     document.getElementById("startButton").setAttribute("onclick", "stopRunning()");
-    //alert(startTime);
 }
 
 function stopRunning() {
@@ -21,8 +20,9 @@ function stopRunning() {
     document.getElementById("startButton").removeAttribute("onclick");
     document.getElementById("startButton").setAttribute("onclick", "startRunning()");
 
-    
-    //alert(startTime);
-    //alert(stopTime);
-    //alert(totalTime);
+    alert('Start: ' + startTime + ' Stop: ' + stopTime + ' Total: ' + totalTime);
+
+    var result = { 'Start: ': startTime, ' Stop: ': stopTime, ' Total: ': totalTime };
+    // Put the object into storage
+    localStorage.setItem('result', JSON.stringify(result));
 }
