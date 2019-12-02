@@ -113,3 +113,12 @@ h1 {
 .map, .content, #content {
     height: 100% !important;
 }
+
+#content {
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    width: 100px;
+}
