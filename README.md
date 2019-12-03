@@ -11,4 +11,4 @@ and amount it, walked will also give the user dietary and exercise recommendatio
 activity ever after will be able to eliminate the need for multiple different applications to track calories, measurements and exercise amount.
 
 
-Then, You can check the progress of our project on the Project tab. I hope this content will help you. Thank you
+Then, You can check the progress of our project on the Project tab as well as Issue tab. I hope this content will help you. Thank you
