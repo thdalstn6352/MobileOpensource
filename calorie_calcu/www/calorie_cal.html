@@ -1,0 +1,157 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calories Calculator</title>
+
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Raleway|Roboto|Sarabun|Source+Sans+Pro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <noscript><link rel="stylesheet" href="assests/css/noscript.css" /></noscript>
+    <script>
+        const numOnly = (x) => {
+            const charCode = (x.which) ? x.which : x.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        };
+    </script>
+</head>
+
+<<body class="is-preload landing">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="index.html">Landed</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calorie_cal.html">Calorie Calculator</a></li>
+                    <li><a href="calorieCount.html">Food Calorie</a></li>
+                    <li><a href="measurements.html">Measurement</a></li>
+                    <li><a href="nonUserHome.html">logout</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <main>
+        <div class="alert" id="alert">
+            <span class="close-alert" onclick="this.parentElement.style.display='none';">&times;</span>
+            <p id="alert-value">This is a alert!</p>
+        </div>
+        <div class="container">
+          
+
+            <div class="total-calories-burned hidden" id="totalBurnDisplay">
+                <p>
+                    You'd burn <span class="calorie-counter" id="totalBurnRes">0</span> <span class="break">
+                        calories in
+                        total
+                    </span>
+                </p>
+            </div>
+
+            <div class="user-weight" id="displayWeight"></div>
+            <div class="button-container" id="buttonContainer"></div>
+
+            <div class="input-container" id="weightInput">
+                <div class="greeting">
+                    <div class="enter-text">Enter your weight to get started</div>
+                </div>
+                <input type="tel" maxlength='3' onkeypress="return numOnly(event)" placeholder="Weight" id="weight-input"
+                       class="input-info" autocomplete="off" autofocus>
+                <div class="weight-metric input-metric" id="weightInputMetric">
+                    <span id="currentMetric">kg</span>
+
+                </div>
+                <div class="metric-dropdown metric-options-closed" id="weightDropdown">kg</div>
+            </div>
+
+
+
+            <div class="calculator-section hidden" id="calculatorSection">
+                <div class="activity-inputs-container">
+                    <div class="activity-card-container">
+                        <div class="input-container">
+
+                            <div class="enter-text">Enter walked distance</div>
+
+                            <div class="input-items activity-input">
+                                <input type="tel" maxlength='3'
+                                       onkeypress="return numOnly(event)" class="input-info" placeholder="Walked"
+                                       autocomplete="off" id="walking-input">
+                                <div class="input-metric" id="walkingInputMetric">
+                                    <p>km</p>
+                                </div>
+                                <div class="calories-burned">
+                                    Calories Burned<span class="calorie-counter"
+                                                         id="caloriewalking">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="activity-card-container">
+                        <div class="input-container">
+
+                            <div class="enter-text">Enter run distance</div>
+                           
+                            <div class="input-items activity-input">
+                                <input type="tel" maxlength='3'
+                                       onkeypress="return numOnly(event)" class="input-info" placeholder="Ran"
+                                       autocomplete="off" id="running-input">
+                                <div class="input-metric" id="runningInputMetric">
+                                    <p>km</p>
+                                </div>
+                                <div class="calories-burned">
+                                    Calories Burned<span class="calorie-counter"
+                                                         id="calorierunning">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card-container">
+                        <div class="input-container">
+
+                            <div class="enter-text">Enter minutes jumped</div>
+
+                            <div class="input-items activity-input">
+                                <input type="tel" maxlength='3'
+                                       onkeypress="return numOnly(event)" class="input-info" placeholder="Jumping Jacks"
+                                       autocomplete="off" id="jumpingjacks-input">
+                                <div class="input-metric" id="jumpingjacksInputMetric">
+                                    <p>min</p>
+                                </div>
+                                <div class="calories-burned">
+                                    Calories Burned<span class="calorie-counter"
+                                                         id="caloriejumpingjacks">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="assets/js/calburned.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
