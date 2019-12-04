@@ -22,7 +22,7 @@ function stopRunning() {
 
     alert('Start: ' + startTime + ' Stop: ' + stopTime + ' Total: ' + totalTime);
 
-    var result = { 'Start: ': startTime, ' Stop: ': stopTime, ' Total: ': totalTime };
+    var result = { 'Start ': startTime, 'Stop ': stopTime, 'Total ': totalTime };
     // Put the object into storage
     var i;
     for (i = 0; i < localStorage.length; i++) {}
