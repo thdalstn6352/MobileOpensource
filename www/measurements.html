@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Landed by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assests/css/noscript.css" /></noscript>
+    <script>
+        function wipe() {
+            document.getElementById("weight").innerText = "";
+            document.getElementById("height").innerText = "";
+            document.getElementById("age").innerText = "";
+        }
+
+        function calculate() {
+
+            var weight = document.forms["measure"]["weight"].value;
+            var height = document.forms["measure"]["height"].value;
+            var age = document.forms["measure"]["age"].value;
+            var exercise = document.getElementById("exercise");
+            var choice = exercise.options[exercise.selectedIndex].value;
+            if (document.getElementById("male").checked) {
+                if (choice == "little") {
+                    var basal = (13.397 * weight) + (4.799 * height) - (5.677 * age) + 88.362;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal);
+                    document.getElementById("mild").innerText = Math.round(mild);
+                    document.getElementById("normal").innerText = Math.round(normal);
+                    document.getElementById("extreme").innerText = Math.round(extreme);
+                } else if (choice == "light") {
+                    var basal = (13.397 * weight) + (4.799 * height) - (5.677 * age) + 88.362;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 308);
+                    document.getElementById("mild").innerText = Math.round(mild + 308);
+                    document.getElementById("normal").innerText = Math.round(normal +308);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 308);
+                } else if (choice == "moderate") {
+                    var basal = (13.397 * weight) + (4.799 * height) - (5.677 * age) + 88.362;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 466);
+                    document.getElementById("mild").innerText = Math.round(mild + 466);
+                    document.getElementById("normal").innerText = Math.round(normal + 466);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 466);
+                } else if (choice == "active") {
+                    var basal = (13.397 * weight) + (4.799 * height) - (5.677 * age) + 88.362;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 616);
+                    document.getElementById("mild").innerText = Math.round(mild + 616);
+                    document.getElementById("normal").innerText = Math.round(normal + 616);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 616);
+                } else if (choice == "vActive") {
+                    var basal = (13.397 * weight) + (4.799 * height) - (5.677 * age) + 88.362;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 924);
+                    document.getElementById("mild").innerText = Math.round(mild + 924);
+                    document.getElementById("normal").innerText = Math.round(normal + 924);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 924);
+                } else {
+                    var basal = (13.397 * weight) + (4.799 * height) - (5.677 * age) + 88.362;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 1232);
+                    document.getElementById("mild").innerText = Math.round(mild + 1232);
+                    document.getElementById("normal").innerText = Math.round(normal + 1232);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 1232);
+                }
+            } else {
+                if (choice == "little") {
+                    var basal = (9.247 * weight) + (3.098 * height) - (4.33 * age) + 447.593;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal);
+                    document.getElementById("mild").innerText = Math.round(mild);
+                    document.getElementById("normal").innerText = Math.round(normal);
+                    document.getElementById("extreme").innerText = Math.round(extreme);
+                } else if (choice == "light") {
+                    var basal = (9.247 * weight) + (3.098 * height) - (4.33 * age) + 447.593;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 279);
+                    document.getElementById("mild").innerText = Math.round(mild + 279);
+                    document.getElementById("normal").innerText = Math.round(normal + 279);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 279);
+                } else if (choice == "moderate") {
+                    var basal = (9.247 * weight) + (3.098 * height) - (4.33 * age) + 447.593;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 423);
+                    document.getElementById("mild").innerText = Math.round(mild + 423);
+                    document.getElementById("normal").innerText = Math.round(normal + 423);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 423);
+                } else if (choice == "active") {
+                    var basal = (9.247 * weight) + (3.098 * height) - (4.33 * age) + 447.593;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 559);
+                    document.getElementById("mild").innerText = Math.round(mild + 559);
+                    document.getElementById("normal").innerText = Math.round(normal + 559);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 559);
+                } else if (choice == "vActive") {
+                    var basal = (9.247 * weight) + (3.098 * height) - (4.33 * age) + 447.593;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 838);
+                    document.getElementById("mild").innerText = Math.round(mild + 838);
+                    document.getElementById("normal").innerText = Math.round(normal + 838);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 838);
+                } else {
+                    var basal = (9.247 * weight) + (3.098 * height) - (4.33 * age) + 447.593;
+                    var weekly = basal * 7;
+                    var mild = (weekly - 1750) / 7;
+                    var normal = (weekly - 3500) / 7;
+                    var extreme = (weekly - 7000) / 7;
+                    document.getElementById("maintain").innerText = Math.round(basal + 1117);
+                    document.getElementById("mild").innerText = Math.round(mild + 1117);
+                    document.getElementById("normal").innerText = Math.round(normal + 1117);
+                    document.getElementById("extreme").innerText = Math.round(extreme + 1117);
+                }
+                
+            }
+
+        }
+
+
+
+    </script>
+    <style>
+    * {
+    box-sizing: border-box
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #000000;
+         opacity: 1; /* Firefox */
+     }
+
+
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    color: #000000;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    }
+
+    hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+    }
+
+    /* Set a style for all buttons */
+    button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    }
+
+    button:hover {
+    opacity: 1;
+    }
+
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+    }
+
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+    }
+
+    /* Add padding to container elements */
+    .container {
+    padding: 16px;
+    }
+
+
+    /* Clear floats */
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+    width: 100%;
+    }
+    }
+    </style>
+</head>
+<body class="is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="userHome.html">Landed</a></h1>
+            <nav id="nav">
+                <ul id="list">
+                    <li><a href="userHome.html">Home</a></li>
+                    <li>
+                        <a href="#">Layouts</a>
+                        <ul>
+                            <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                            <li><a href="no-sidebar.html">No Sidebar</a></li>
+                            <li>
+                                <a href="#">Submenu</a>
+                                <ul>
+                                    <li><a href="#">Option 1</a></li>
+                                    <li><a href="#">Option 2</a></li>
+                                    <li><a href="#">Option 3</a></li>
+                                    <li><a href="#">Option 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="measurements.html">Measurements</a></li>
+                    <li><a href="calorieCount.html">Calorie Counter</a></li>
+                    <li><a href="nonUserHome.html">logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="main" class="wrapper style1">
+            <header class="major">
+                <h2>Measurement</h2>
+            </header>
+            <form name="measure">
+                <div class="container">
+                    <p>Please select your gender:</p>
+                    <input type="radio" name="gender" id="male" value="male" checked> <label for="male">Male</label><br>
+                    <input type="radio" name="gender" id="female" value="female"> <label for="female">Female</label><br>
+                    
+                    <br />
+                    <label for="weight"><b>Weight:</b></label>
+                    <input type="text" id="weight" name="weight" placeholder="Enter weight" required />
+
+                    <label for="height"><b>Height:</b></label>
+                    <input type="text" id="height" name="height" placeholder="Enter Height" required />
+
+                    <label for="age"><b>Age:</b></label>
+                    <input type="text" placeholder="Enter Age" name="age" id="age" required />
+
+                    <b>Amount of Exercise:</b>
+                    <select id="exercise" name="exercise" required>
+
+                        <option value="little">sedentary: little to no exercise</option>
+                        <option value="light">light: exercise 1-3 times a week</option>
+                        <option value="moderate">moderate: exercise 4-5 times a week</option>
+                        <option value="active">active: daily exercise or intense exercise 3-4 times a week</option>
+                        <option value="vActive">very active: intense exercise 6-7 times a week</option>
+                        <option value="eActive">Active job(e.g farmer/bodybuilder)</option>
+                    </select>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="wipe()" id="edit" class="cancelbtn">clear</button>
+                        <button type="button" onclick="calculate()" id="save" class="signupbtn">Calculate</button>
+                    </div>
+                </div>
+            </form>
+
+
+            <h3>Maintain Weight:</h3><h3 id="maintain"></h3><br />
+            <h3>Mild Weight loss (0.25kg/week):</h3>  <h3 id="mild"></h3><br />
+            <h3>Weight loss (0.5kg/week):</h3><h3 id="normal"></h3><br />
+            <h3>Extreme weight loss (1kg/week):</h3><h3 id="extreme"></h3><br />
+
+        </div>
+
+
+
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </div>
+    
+</body>
+</html>
