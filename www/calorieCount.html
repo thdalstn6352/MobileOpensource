@@ -1,0 +1,732 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Landed by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assests/css/noscript.css" /></noscript>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the list (remove margins and bullets, etc) */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            /* Style the list items */
+            ul li {
+                border: 1px solid #ddd;
+                margin-top: -1px; /* Prevent double borders */
+                background-color: #f6f6f6;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                color: black;
+                display: block;
+                position: relative;
+            }
+
+                /* Add a light grey background color on hover */
+                ul li:hover {
+                    background-color: #eee;
+                }
+
+        /* Style the close button (span) */
+        .add {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            padding: 12px 16px;
+            transform: translate(0%, -50%);
+        }
+
+            .add:hover {
+                background: #bbb;
+            }
+    </style>
+    <script>
+       
+        var now = new Date();
+        var millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0) - now;
+        if (millisTill10 < 0) {
+            millisTill10 += 86400000; // it's after 10am, try 10am tomorrow.
+        }
+
+        setTimeout(function () { localStorage.setItem("caloriesEaten",0) }, millisTill10);
+        
+
+        var burned = localStorage.getItem("caloriesBurned");
+        if (burned == null) {
+            localStorage.setItem("caloriesBurned", 0);
+        }
+
+        
+        
+
+        function add_cheese() {
+            var calorie = 404;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("cheese", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("milk") == null) {
+                    localStorage.setItem("milk", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("cheese"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("cheese", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_milk() {
+            var calorie = 61;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("milk", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("milk") == null) {
+                    localStorage.setItem("milk", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("milk"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("milk", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+                }
+                
+            }
+        
+
+        function add_egg() {
+            var calorie = 143;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("egg", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("egg") == null) {
+                    localStorage.setItem("egg", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("egg"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("egg", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_yogurt() {
+            var calorie = 105;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("yogurt", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("yogurt") == null) {
+                    localStorage.setItem("yogurt", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("yogurt"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("yogurt", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_iceCream() {
+            var calorie = 222;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("iceCream", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("iceCream") == null) {
+                    localStorage.setItem("iceCream", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("iceCream"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("iceCream", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+        function add_chicken() {
+            var calorie = 246;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("chicken", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("chicken") == null) {
+                    localStorage.setItem("chicken", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("chicken"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("chicken", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+        
+        function add_pork() {
+            var calorie = 255;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("pork", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("pork") == null) {
+                    localStorage.setItem("pork", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("pork"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("pork", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_beef() {
+            var calorie = 271;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("beef", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("beef") == null) {
+                    localStorage.setItem("beef", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("beef"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("beef", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_ham() {
+            var calorie = 180;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("ham", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("ham") == null) {
+                    localStorage.setItem("ham", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("ham"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("ham", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_ramyeon() {
+            var calorie = 188;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("ramyeon", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("ramyeon") == null) {
+                    localStorage.setItem("ramyeon", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("ramyeon"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("ramyeon", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_apple() {
+            var calorie = 95;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("apple", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("apple") == null) {
+                    localStorage.setItem("apple", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = localStorage.getItem("caloriesEaten");
+                    var stuff = parseInt(localStorage.getItem("apple"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("apple", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_banana() {
+            var calorie = 105;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("banana", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("banana") == null) {
+                    localStorage.setItem("banana", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("banana"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("banana", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_kimchi() {
+            var calorie = 23;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("kimchi", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("kimchi") == null) {
+                    localStorage.setItem("kimchi", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("kimchi"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("kimchi", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_rice() {
+            var calorie = 206;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("rice", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("rice") == null) {
+                    localStorage.setItem("rice", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("rice"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("rice", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+        function add_bread() {
+            var calorie = 66;
+            if (localStorage.getItem("caloriesEaten") == null) {
+                localStorage.setItem("caloriesEaten", calorie);
+                localStorage.setItem("bread", 1);
+                location.reload();
+            } else {
+                if (localStorage.getItem("bread") == null) {
+                    localStorage.setItem("bread", 1);
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var newCal = previous + calorie;
+                    localStorage.setItem("caloriesEaten", newCal);
+                } else {
+                    var previous = parseInt(localStorage.getItem("caloriesEaten"));
+                    var stuff = parseInt(localStorage.getItem("bread"));
+                    var newCal = previous + calorie;
+                    stuff++;
+                    localStorage.setItem("bread", stuff);
+                    localStorage.setItem("caloriesEaten", newCal);
+                }
+                location.reload();
+            }
+        }
+
+
+        function delete_cheese() {
+            var calorie = 404;
+            var previous = parseInt(localStorage.getItem("cheese"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous>0) {
+                previous--;
+                localStorage.setItem("cheese", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten",total)
+                location.reload();
+            }
+        }
+
+        function delete_milk() {
+            var calorie = 61;
+            var previous = parseInt(localStorage.getItem("milk"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("milk", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_egg() {
+            var calorie = 143;
+            var previous = parseInt(localStorage.getItem("egg"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("egg", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_yogurt() {
+            var calorie = 105;
+            var previous = parseInt(localStorage.getItem("yogurt"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("yogurt", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_iceCream() {
+            var calorie = 222;
+            var previous = parseInt(localStorage.getItem("iceCream"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("iceCream", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+        function delete_chicken() {
+            var calorie = 246;
+            var previous = parseInt(localStorage.getItem("chicken"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("chicken", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_pork() {
+            var calorie = 255;
+            var previous = parseInt(localStorage.getItem("pork"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("pork", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_beef() {
+            var calorie = 271;
+            var previous = parseInt(localStorage.getItem("beef"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("beef", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_ham() {
+            var calorie = 180;
+            var previous = parseInt(localStorage.getItem("ham"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("ham", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_ramyeon() {
+            var calorie = 188;
+            var previous = parseInt(localStorage.getItem("ramyeon"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("ramyeon", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_apple() {
+            var calorie = 95;
+            var previous = parseInt(localStorage.getItem("apple"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("apple", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_banana() {
+            var calorie = 105;
+            var previous = parseInt(localStorage.getItem("banana"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("banana", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_kimchi() {
+            var calorie = 23;
+            var previous = parseInt(localStorage.getItem("kimchi"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("kimchi", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_rice() {
+            var calorie = 206;
+            var previous = parseInt(localStorage.getItem("rice"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("rice", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+        function delete_bread() {
+            var calorie = 66;
+            var previous = parseInt(localStorage.getItem("bread"));
+            var total = parseInt(localStorage.getItem("caloriesEaten"));
+            if (previous > 0) {
+                previous--;
+                localStorage.setItem("bread", previous);
+                total = total - calorie;
+                localStorage.setItem("caloriesEaten", total)
+                location.reload();
+            }
+        }
+
+
+        function refresh() {
+            var eaten = localStorage.getItem("caloriesEaten");
+            var net = eaten - burned;
+            if (eaten != null) {
+                document.getElementById("change").innerHTML = "Calories eaten:" + eaten + " Calories Burned: " + burned + " = " + net; 
+            }
+        }
+
+        function myFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+    </script>
+</head>
+<body class="is-preload" onload="refresh()">
+    <div id="page-wrapper">
+        <header id="header">
+            <h1 id="logo"><a href="index.html">Landed</a></h1>
+            <nav id="nav">
+                <ul id="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Layouts</a>
+                        <ul>
+                            <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                            <li><a href="no-sidebar.html">No Sidebar</a></li>
+                            <li>
+                                <a href="#">Submenu</a>
+                                <ul>
+                                    <li><a href="#">Option 1</a></li>
+                                    <li><a href="#">Option 2</a></li>
+                                    <li><a href="#">Option 3</a></li>
+                                    <li><a href="#">Option 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="nonUserHome.html">logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a food">
+        <p id="change">Calories Eaten: 0 + calories Burned: 0 = 0</p>
+        <ul id="myMenu">
+            <li>cheese      <button onclick="add_cheese()">+</button><button onclick="delete_cheese()">-</button></li>
+            <li>milk         <button onclick="add_milk()">+</button><button onclick="delete_milk()">-</button></li>
+            <li>1 egg        <button onclick="add_egg()">+</button><button onclick="delete_egg()">-</button></li>
+            <li>yogurt       <button onclick="add_yogurt()">+</button><button onclick="delete_yogurt()">-</button></li>
+            <li>soft serve ice cream        <button onclick="add_iceCream()">+</button><button onclick="delete_iceCream()">-</button></li>
+            <li>chicken 100g        <button onclick="add_chicken()">+</button><button onclick="delete_chicken()">-</button></li>
+            <li>pork 100g        <button onclick="add_pork()">+</button><button onclick="delete_pork()">-</button></li>
+            <li>beef 100g        <button onclick="add_beef()">+</button><button onclick="delete_beef()">-</button></li>
+            <li>ham 100g         <button onclick="add_ham()">+</button><button onclick="delete_ham()">-</button></li>
+            <li>ramyeon          <button onclick="add_ramyeon()">+</button><button onclick="delete_ramyeon()">-</button></li>
+            <li>1 apple          <button onclick="add_apple()">+</button><button onclick="delete_apple()">-</button></li>
+            <li>1 banana         <button onclick="add_banana()">+</button><button onclick="delete_banana()">-</button></li>
+            <li>kimchi 150g      <button onclick="add_kimchi()">+</button><button onclick="delete_kimchi()">-</button></li>
+            <li>rice 1 cup       <button onclick="add_rice()">+</button><button onclick="delete_rice()">-</button></li>
+            <li>bread 1 slice    <button onclick="add_bread()">+</button><button onclick="delete_bread()">-</button></li>
+        </ul>
+
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
