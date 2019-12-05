@@ -1,0 +1,36 @@
+measurement
+
+This function is a function to input the user's weight, height, age, and normal exercise intensity to recommend calorie consumption accordingly. First, you enter the user's information, and then you calculate the daily basic metabolic rate. And depending on the degree of weight loss that users want, the individual's daily calorie metabolism is determined by integrating the amount 
+of calories consumed and intake.
+
+ *wipe()
+-> get the uesr's personal information such as height, weight and age.
+
+ *calculate()
+-> calculate user customized daily basal metabolic volume
+-> calculate weekly basal metabolic volume
+-> if user want to lose weight, choose the exercise intensity(little/light/moderate/active/v-active/maintaining and degree of weight loss(mild/normal/extreme). Then it will calculate the total calorie for daily and weekly.
+
+
+map.js
+
+This function is a function that takes the initial position of the user from the map, continuously checks the movement of the user, and displays the location information on the screen.
+By checking the location and movement of the user in real time, the user can calculate the distance he or she worked out and take time off. You can also display a map on the screen to see where the user is and where he or she wants to be using a mark.
+
+ *initLocationProcedure()
+-> set the user's initial location
+
+ *locError()
+->if initial location can not be shown, message pops up
+
+ *displayAndWatch(position)
+-> get the map and shows on screen
+
+ *setUserLocation(pos)
+-> keep checking and getting the user's location in real time
+
+ *watchCurrentPosition()
+-> shows user's current loaction which is checked by setUserLocation by mark on the map
+
+ *setMarkerPosition(marker, position)
+-> if user mark on the map, it shows that location point
