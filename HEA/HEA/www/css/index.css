@@ -108,6 +108,8 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    min-height: 100%;
 }
 
 .map, .content, #content {
@@ -115,7 +117,7 @@ h1 {
 }
 
 #content {
-    position: relative;
+    overflow: auto;
 }
 
 .button {

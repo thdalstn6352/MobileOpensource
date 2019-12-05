@@ -9,16 +9,7 @@
 });
 
 function loadHistory() {
-    /*var result
-    for (var i = 0; i < localStorage.length; i++) {
-        var keyname = window.localStorage.key(i);
-
-        result += "<div " + "id = \"" + keyname + "\"" + ">" + "///" + keyname + "///" + JlocalStorage.getItem('result' + i) + "</div>";
-    }
-    document.getElementById('result').innerHTML = result;*/
-
     var output;
-
     for (var i = 0, len = localStorage.length; i < len; ++i) {
         var keyname = window.localStorage.key(i);
         console.log(localStorage.getItem('result' + i));
