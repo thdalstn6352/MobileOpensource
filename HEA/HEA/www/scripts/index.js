@@ -7,7 +7,6 @@
 
     document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
 
-    // Like any Cordova plugin, you must wait for deviceready before referencing the plugin
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
@@ -19,30 +18,6 @@
         var receivedElement = parentElement.querySelector('.received');
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        //////////////////////  Geolocation   //////////////////////
-        /*
-        var onSuccess = function (position) {
-            var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' +
-                'Longitude: ' + position.coords.longitude + '<br />' +
-                'Altitude: ' + position.coords.altitude + '<br />' +
-                'Heading: ' + position.coords.heading + '<br />' +
-                'Speed: ' + position.coords.speed + '<br />' +
-                'Timestamp: ' + position.timestamp + '<br />' +
-                '<hr />' + element.innerHTML;
-        };
-
-        // onError Callback receives a PositionError object
-        //
-        function onError(error) {
-            alert('code: ' + error.code + '\n' +
-                'message: ' + error.message + '\n');
-        }
-
-        var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000, enableHighAccuracy: true });
-        */
-        
     };
 
     function onPause() {

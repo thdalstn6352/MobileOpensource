@@ -95,21 +95,3 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
-
-#footer {
-    padding: 0 !important;
-}
-
-#footer .icons{
-    margin: 0 !important;
-}
-
-#page-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.map{
-    height: 82% !important;
-}

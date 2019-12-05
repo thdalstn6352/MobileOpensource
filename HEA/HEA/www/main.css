@@ -1,0 +1,769 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Roboto;
+    transition: background .2s;
+
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(124, 124, 124);
+  }
+
+body{
+    transition: background .2s;
+}
+.edit-weight{
+    border:2px solid;
+    padding:.2em;
+}
+.hidden{
+    display: none;
+}
+button{
+    cursor: pointer;
+}
+.no-select{
+    user-select: none;
+}
+button:focus{
+    outline:none;
+}
+.light-mode{
+    margin-bottom: 5px;
+    position: relative;
+}
+.sun-icon{
+    color:orange;
+    font-size: 2em;
+    float: right;
+    margin-top:-12px;
+    margin-left: 5px;
+}
+
+.toggle-modes{
+    position: absolute;
+    right:0;
+    margin:5%;
+    margin-top: 3%;
+    color:#B4B4B4;
+    font-size: .8em;
+    top:0;
+}
+.try{
+    border: 1px solid #E8E8E8;
+    border-radius: 100px;
+    padding:5px;
+    padding-left: 10px;
+    width:120px;
+    height:20px;
+    float:right;
+    line-height: 20px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.try.dark-mode:hover{
+    color:white;
+    border-color: #6A6A6A;
+    background-color: #2B2B2B;
+}
+#content{
+    display: flex;
+    position: absolute;
+    width:100%;
+    top:0;
+    justify-content: center;
+    align-content: center;
+}
+
+.arrow{
+    width:5px;
+    height:5px;
+    border: 2px solid rgb(255, 255, 255);
+    border-width: 0px 2px 2px 0px;
+    border-radius: 2px;
+    transform: rotate(45deg)
+}
+.generate-button{
+    position: absolute;
+    bottom: 0;
+    background-color: #90BCFF;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.generate-button:hover{
+    background-color: rgb(159, 197, 255);
+}
+
+.up-icon{
+    transform: rotate(-135deg);
+}
+
+.metric-change{
+    position: absolute;
+    top: 50%;
+    margin-top: -3.5px;
+    right: 9px;
+  }
+.background{
+    background-color: #6DA7FF;
+    height:45vh;
+    width:100%;
+    box-shadow: 4px 0px 4px rgba(92, 92, 92, 0.26);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 300px;
+    z-index: -3;
+}
+.button-container{
+    position: absolute;
+    top:40%;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #BEBEBE;
+font-family: Roboto;
+    font-weight:lighter;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:  #BEBEBE;
+  font-family: Roboto;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:  #BEBEBE;
+  font-family: Roboto;
+}
+h1{
+    color: white;
+    position: absolute;
+    top:-75px;
+    font-size: 1.8em;
+}
+input:focus{
+    outline:none;
+}
+
+
+.input-container{
+    position: relative;
+    width:auto;
+    max-width: 300px;
+    min-width: 350px;
+    height:100px;
+    align-self: center;
+}
+.activity-card-container .input-container {
+    height: 150px;
+}
+.user-weight{
+    position: absolute;
+    top:0;
+    margin:1%;
+}
+.weight-number{
+    font-weight: bolder;
+    font-size: 2em;
+    margin-top:15px;
+}
+.metric-dropdown{
+    width:60px;
+    border-radius: 0px 0px 10px 10px;
+    background: #91caff;
+    position: absolute;
+    right:0px;
+    top:54px;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    transition: height .2s;
+    user-select: none;
+    cursor: pointer;
+    height:0;
+}
+.metric-options-open{
+    height: 50px;
+}
+.input-info{
+    height:45px;
+    border-radius:10px;
+    border:none;
+    background-color:#F7F7F7;
+    align-self: center;
+    padding:.4em;
+    padding-top:.2em;
+    padding-bottom: .2em;
+    font-size: 1.5em;
+    color: #4a4a4a;
+    width: calc(100% - .8em);
+    position: absolute;
+    top:0;
+}
+.edit-button{
+    width: 96px;
+    font-size: .8em;
+    background: #3e8aff;
+    padding: 0.3em;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    float:right;
+    margin-right:5px;
+    margin-top:25px;
+    cursor: pointer;
+}
+.cancel{
+    margin-right:5px;
+}
+.input-metric{
+    position: absolute;
+    right:0px;
+    height: 45px;
+    user-select: none;
+    width:40px;
+    padding:.2em;
+    line-height: 45px;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+    background: #6da7ff;
+    color:white;
+    font-family: Roboto;
+    font-weight: bolder;
+    font-size: 1.5em;
+    transition: width .2s;
+}
+.weight-metric{
+    cursor: pointer;
+    user-select: none;
+}
+
+.info-text{
+    color:#797979;
+    text-align: center;
+    margin-top: 15vh;
+    width:100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+.info-text p{
+    font-size: 1.2em;
+    max-width: 700px;
+}
+.activity-text{
+    font-weight: bolder;
+}
+.option-container{
+    width: 100%;
+}
+.option-not-chosen{
+    margin-top:-30px;
+    display: flex;
+    justify-content: center;
+}
+.option-chosen{
+    position: absolute;
+    width:30%;
+    top:0;
+    right:0;
+}
+.option-container button{
+    border:none;
+    padding:10px;
+    width:15%;
+    height: 60px;
+    border-radius: 10px;
+    color:white;
+    box-shadow: 4px 0px 4px rgba(92, 92, 92, 0.26);
+    min-width: 300px;
+    max-width: 350px;
+    font-size:1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+#calculator-button{
+    background-color:#90BCFF;
+    margin-right: 5%;
+    transition-duration: .2s;
+}
+#calculator-button:hover{
+    background-color: #79aeff
+}
+#routine-button{
+    background-color:#76E7CD;
+    transition-duration: .2s;
+}
+#routine-button:hover{
+    background-color: #49e8c4;
+}
+.activity-card-container{
+    width:100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+
+}
+
+
+.input-background{
+    width:100%;
+    height: 60px;
+    background: white;
+    z-index: 2;
+    z-index: -2;
+    position: absolute;
+    top:-25px;
+    left: -10px;
+    border-radius: 10px;
+
+}
+.activity-input{
+    width:100%;
+    position: relative;
+    height:80px;
+    margin-right:4%;
+    top:0;
+
+}
+
+
+.calories-burned{
+    position: absolute;
+    bottom:0;
+    right:20px;
+}
+
+
+.speed-input{
+    position: absolute;
+    top:2px;
+    left:170px;
+    border:none;
+    color: #898989;
+    border-radius: 5px;
+    font-size: 1em;
+    height: 20px;
+    cursor: pointer;
+}
+.mph{
+    position: absolute;
+    top:0;
+    right:60px;
+    font-size: .9em;
+    color: white;
+    top:-5px;
+    cursor: pointer;
+}
+.total-calories-burned{
+    color:#AAAAAA;
+    font-size: 2em;
+    text-align: center;
+    position: absolute;
+    top:25%;
+    margin: 0 auto;
+    left:0;
+    right:0;
+}
+.total-title{
+    font-weight: lighter;
+}
+.calorie-counter{
+ font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    color: orange;
+}
+
+.activity-metric-container{
+    height: 56px;
+    width: 150px;
+    border-radius: 10px;
+    position: absolute;
+    left:2%;
+    bottom:20%;
+    color: white;
+}
+.activity-metric-container div{
+    width:50%;
+    height:100%;
+    position: absolute;
+    font-size: 1.7em;
+    line-height: 55px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.mi{
+    left:0;
+    background-color: #76E7CD;
+    color:#ffffff;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.km{
+    background-color: white;
+    color:#ABABAB;
+    right:0;
+    border-radius: 0px 10px 10px 0px;
+}
+.priority-button{
+    display: inline-block;
+    width:80px;
+    height: 28px;
+    background: #DADADA;
+    border-radius: 5px;
+    color:white;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+}
+.main-priorty-container{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    position: relative;
+    min-width: 300px;
+}
+.priority-container{
+    margin-right:5%;
+    margin-top: 10%;
+    text-align: center;
+}
+.priority-container h2{
+    margin-bottom: 15px;
+    color: #8B8B8B;
+}
+.split-button{
+    width:200px;
+    height:30px;
+    background: #90BCFF;
+    border-radius: 10px;
+    color:white;
+    text-align: center;
+    line-height: 30px;
+    box-shadow: 2px 2px 2px #ccc;
+    position: absolute;
+    top:23%;
+}
+
+.speed-list{
+    width:100px;
+    position: absolute;
+    background:#d0d0d0;
+    right:10px;
+    top:20px;
+}
+.activity-input .focused-input{
+    top:-50px;
+    position: absolute;
+    color:white;
+}
+.activity-input .focused-input-mobile{
+    top:-50px;
+    position: absolute;
+    color: gray;
+}
+.distance-metric{
+    width:60px;
+    background: gray;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    height: 25px;
+    top:-40px;
+    cursor: pointer;
+    user-select: none;
+}
+.distance-metric div{
+    display: inline;
+    padding:0px;
+    background: white;
+    width:50%;
+    position: absolute;
+    top:0;
+    height:100%;
+    line-height: 25px;
+    color:white;
+}
+#mi{
+    left:0;
+    background: #6868ff;
+    border-radius: 5px 0px 0px 5px;
+}
+#km{
+    border-radius: 0px 5px 5px 0px;
+    background: gray;
+}
+
+.display-none{
+    visibility: hidden;
+    position: absolute;
+}
+.speed-options-container{
+    background: rgb(230, 230, 230);
+    border-radius: 2px;
+    position: absolute;
+    top: 23px;
+    right: 143px;
+    height: 0px;
+    overflow-y: scroll;
+    z-index: 1;
+    transition: height .3s;
+    font-size: .9em;
+    user-select: none;
+}
+.speed-options-container div{
+    transition: background .3s;
+    border-bottom: 2px rgb(218, 218, 218) solid;
+    padding:5px;
+}
+.speed-options-container div:hover{
+    background: rgb(221, 221, 221);
+}
+.speed-options-open{
+    height:200px;
+
+}
+.speed-option{
+    cursor: pointer;
+}
+.greeting {
+    position: absolute;
+    top:-30px;
+}
+
+
+.enter-text {
+    color: #ffa500;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.day {
+    color: #ABABAB;
+}
+
+.fun-facts {
+    position: absolute;
+    bottom:0;
+    left:0;
+    color: #656565;
+    padding:2em;
+    width:100%;
+    background-color: #F8F8F8;
+    box-sizing: border-box;
+}
+.edit-btn{
+    width:70px;
+    height:20px;
+    float:left;
+    background-color: rgb(78, 78, 78);
+    margin-right:5px;
+    border-radius:5px;
+    padding:2px;
+    color:white;
+}
+h2{
+    padding:1em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+    font-weight: 100;
+    padding-left: .6em;
+}
+
+#weightInputMetric{
+    width:50px;
+}
+#weight-input-edit{
+    font-size: 0.8em;
+    background: white;
+    height:30px;
+    padding:0;
+    background-color: rgba(128, 128, 128, 0);
+    border-radius: 0;
+    user-select: none;
+}
+.mph-drop{
+    border-color: rgb(148, 148, 148);
+    right: -11px;
+    top: 45%;
+    position: absolute;
+}
+.fact-card{
+    padding: 1em;
+}
+/*dark theme*/
+.dark-theme{
+    background-color: #2B2B2B;
+}
+ .dark-theme .input-info, .dark-theme .edit-button{
+    background-color: #696969;
+    color:#cbcbcb;
+}
+.dark-theme .input-metric{
+    background-color: #9E9E9E;
+}
+.dark-theme .fun-facts{
+    background-color: #2B2B2B;
+    color:#c6c6c6;
+}
+.dark-theme .calorie-counter, .dark-theme.enter-text{
+    color:#e0e0e0;
+}
+.dark-theme .calories-burned{
+    color:rgb(180, 116, 21);
+}
+
+.moon-icon {
+    color:yellow;
+    font-size: 2em;
+    float: right;
+    margin-top:-12px;
+    margin-left: 5px;
+}
+
+
+.inputs-container {
+    position: absolute;
+    width:100%;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 822px;
+    width: 100%;
+    position: relative;
+}
+
+.activity-inputs-container {
+    display: flex;
+}
+@media only screen and (max-width: 1056px) {
+
+    .activity-inputs-container{
+        display: flex;
+        flex-flow:column;
+    }
+    .total-calories-burned{
+        top: 15%;
+    }
+    .activity-card-container .input-container {
+        height: 110px;
+    }
+
+
+
+}
+@media only screen and (max-width: 700px) {
+    .container{
+        height:100vh;
+        min-height: 558px;
+    }
+    .distance-metric{
+        position: absolute;
+        bottom:0;
+    }
+    .toggle-modes{
+        top:auto;
+        bottom:0;
+    }
+    .calculator-section{
+        margin-top:-10px;
+    }
+    .user-weight{
+        top:auto;
+        bottom:0;
+    }
+    .total-calories-burned {
+        top: 17px;
+    }
+    .input-container{
+        width: 96%;
+        min-width: 300px;
+        max-width: 100%;
+    }
+    .input-info{
+        height: 46px;
+    }
+    .input-metric{
+        height:46px;
+        width:46px;
+        line-height: 46px;
+    }
+    .fun-facts{
+        display: none;
+    }
+    .calories-burned{
+        right: 10px;
+    }
+    .activity-card-container{
+        width:100%;
+        margin-top:17px;
+    }
+    .total-calories-burned{
+        text-align: left;
+        margin-left:7px;
+    }
+    .break{
+        display: -webkit-box;
+    }
+}
+@media only screen and (max-width: 500px) {
+
+}
+@media only screen and (max-height: 600px) {
+.input-info{
+    height: 43px;
+}
+.input-metric{
+    height:43px;
+    width:40px;
+    line-height: 43px;
+}
+}
+body {
+        min-width: 320px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    display: none;
+  }
+
+  .close-alert {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .close-alert:hover {
+    color: black;
+  }
