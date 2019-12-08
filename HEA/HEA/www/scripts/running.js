@@ -13,7 +13,7 @@ function startRunning() {
     // using setInterval to make it better
     window.setTimeout(function (position) {
         navigator.geolocation.getCurrentPosition(watchSpeed, onError);
-    }, 1000);
+    }, 60000);
 }
 
 function stopRunning() {
