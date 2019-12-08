@@ -95,3 +95,32 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+#footer {
+    padding: 0 !important;
+}
+
+#footer .icons{
+    margin: 0 !important;
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 100%;
+}
+
+.map, .content, #content {
+    height: 100% !important;
+}
+
+#content {
+    overflow: auto;
+}
+
+.button {
+    position: absolute;
+    width: 100px;
+}
