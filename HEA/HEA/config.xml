@@ -8,7 +8,7 @@
   <engine name="android" spec="5.2.1" />
   <engine name="ios" spec="4.2.0" />
   <engine name="windows" spec="4.4.2" />
-  <content src="index.html" />
+  <content src="nonUserHome.html" />
   <access origin="*" />
   <preference name="SplashScreen" value="screen" />
   <preference name="windows-target-version" value="10.0" />
