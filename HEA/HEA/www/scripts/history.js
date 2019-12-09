@@ -26,12 +26,11 @@ function loadHistory() {
         outputC += " km/h  ||  ";
         outputC += JSON.parse(retrievedResult).distance;
         outputC += " m" + "</p>";
+
+        document.getElementById("result").innerHTML += outputT;
+        document.getElementById("result").innerHTML += outputC;
     }
     console.log(localStorage.length);
-
-    document.getElementById("result").innerHTML = outputT;
-    //document.getElementById("result").appendChild(document.createElement('br'));
-    document.getElementById("result").innerHTML += outputC;
 }
 
 function clearHistory() {
