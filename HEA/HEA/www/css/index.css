@@ -124,3 +124,12 @@ h1 {
     position: absolute;
     width: 100px;
 }
+
+#outputT {
+    margin: 0;
+}
+
+#outputT, #outputC {
+    display: flex;
+    justify-content: center;
+}

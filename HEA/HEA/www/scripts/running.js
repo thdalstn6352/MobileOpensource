@@ -30,7 +30,7 @@ function stopRunning() {
 
     alert('Start: ' + startTime + ' Stop: ' + stopTime + ' Total: ' + totalTime + '\"' + ' Speed: ' + speed + ' Distance: ' + distance + ' m');
 
-    var result = { 'Start ': startTime, 'Stop ': stopTime, 'Total ': totalTime, 'Speed': speed, 'Distance': distance };
+    var result = { 'start': startTime, 'stop': stopTime, 'total': totalTime, 'speed': speed, 'distance': distance };
 
     // Put the object into storage
     var i;
