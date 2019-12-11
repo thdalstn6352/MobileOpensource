@@ -12,5 +12,6 @@ activity ever after will be able to eliminate the need for multiple different ap
 
 
 Then, You can check the progress of our project on the Project tab as well as Issue tab. I hope this content will help you. Thank you
+And also, Modified and supplemented code can be found in *minsoo_not_origin branch.
 
 Where can you find the .apk file for android: \HEA\HEA\bin\Android\Debug\android-debug.apk Then download it and allow everytings.
